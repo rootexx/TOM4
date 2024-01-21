@@ -8,14 +8,6 @@ def kurulum():
     except FileNotFoundError:
         print("install.sh bulunamadı")
 
-def main():
-    print("toma.py çalıştırılıyor.")
-    os.system("python toma.py")
-
-if __name__ =="__main__":
-    kurulum()
-    main()
-
 def find_admin_panel():
     try:
         os.system("python admin/admin.py")
@@ -73,7 +65,7 @@ def banner():
    print("  |_|  \\___/ |_|  |_|/_/   \\_\\ \033[0;31m[\033[0;32mCoded By K4HINz <3\033[0;31m]\033")
    print("\033[0;31m[\033[0;32mInstagram:@t4lha.js\033[0;31m]\033")
    print("\033[0;31mUYARI:\033[0;32mYapılan islemler sorumlulugumda degildir!!!")
-   print()
+   print("\033[0;31mUYARI:\033[0;32mKullanmaya başlamadan önce 0 çalıştırın!!!!")
    print()
 
 
@@ -82,7 +74,7 @@ def banner():
 while True:
     os.system("")
     banner()
-
+    print("\033[0;31m[\033[0;32m0\033[0;31m]\033[0m KURULUM!!!")
     print("\033[0;31m[\033[0;32m1\033[0;31m]\033[0m Admin panel          \033[0;31m[\033[0;32m2\033[0;31m]\033[0m SMS Bomb")  
     print("\033[0;31m[\033[0;32m3\033[0;31m]\033[0m Random Pass          \033[0;31m[\033[0;32m4\033[0;31m]\033[0m Ddos*")
     print("\033[0;31m[\033[0;32m5\033[0;31m]\033[0m NULL                 \033[0;31m[\033[0;32m6\033[0;31m]\033[0m NULL")
@@ -94,6 +86,9 @@ while True:
     if choice == "1":
         find_admin_panel()
         sys.exit(0)  # İşlem yapıldıktan sonra programı sonlandır
+    elif choice == "0":
+        kurulum()
+        sys.exit(0)
     elif choice == "2":
         send_sms()
         sys.exit(0)
