@@ -1,5 +1,20 @@
 import os
 import sys
+import subprocess
+
+def kurulum():
+    try:
+        os.system("bash install.sh")
+    except FileNotFoundError:
+        print("install.sh bulunamadı")
+
+def main():
+    print("toma.py çalıştırılıyor.")
+    os.system("python toma.py")
+
+if __name__ =="__main__":
+    kurulum()
+    main()
 
 def find_admin_panel():
     try:
